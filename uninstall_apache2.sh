@@ -11,6 +11,7 @@ fi
 
 sudo service apache2 stop  
 sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
+sudo apt-get autoremove
 ### this following directory is dependent on the linux distro and I found it using the command whereis apache2
 sudo rm -rf /usr/share/apache2
 echo "apache2 removed successfully"
