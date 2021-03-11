@@ -10,11 +10,11 @@ read -p "Enter the site name : " WEBSITE
 #### Checking the config file of the web site ####
 if [[ -f "/etc/apache2/sites-available/$WEBSITE.conf" ]]
 then
-    echo "This config file exists on your filesystem."
+    echo "$WEBSITE.con file exists on your filesystem."
     echo "Deleting ..."
     rm $WEBSITE.conf
 else
-    echo "Sorry we couldn't find the config file of the specified web site!"
+    echo "Sorry we couldn't find $WEBSITE.conf file on your filesystem!"
     exit 1
 fi
 
@@ -27,7 +27,7 @@ then
     cd /var/www
     rm -R $WEBSITE
 else
-    echo "Sorry we couldn't find the directory of the hosted web site under /var/wwww"
+    echo "Sorry we couldn't find /var/www/$WEBSITE on your filesystem."
     exit 2
 fi
 
