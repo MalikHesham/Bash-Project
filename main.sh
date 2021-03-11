@@ -14,7 +14,6 @@ printf "
 ##################################################
 
 "
-
 PS3='Kindly select one of the main menu options: '
 
 CHOICES=("Install apache2" "Uninstall apache2" "Add a Virtual Host" "Delete a Virtual Host" "List all Hosts" "Enable a Site" "Disable a Site" 
@@ -38,11 +37,11 @@ select SELECTION in "${CHOICES[@]}"; do
 		echo "deleting a virtual host ..."
 		bash delete_a_host.sh
 		;;
-    "List all Hosts")
+  "List all Hosts")
 		echo "Listing the available virtual hosts ..."
 		bash list_all_hosts.sh
 		;;
-    "Enable a Site")
+  "Enable a Site")
 		echo "enabling a hosted site ..."
 		bash enable_site.sh
 		;;
@@ -67,7 +66,3 @@ select SELECTION in "${CHOICES[@]}"; do
         ;;
 	esac
 done
-#### To check if apache2 is installed
-OUTPUT="$(apache2 -v | head -1 | awk '{ print $3 }')"
-echo "${OUTPUT}"
-[[ $OUTPUT == "Apache/2.4.41" ]] && echo "You have apache2 installed " || echo "Sorry you don't have apache2 instal>
