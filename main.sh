@@ -11,6 +11,7 @@ printf "
 ####                                          ####
 #### Welcome to the apache2 Administrator 1.0 ####
 ####     by: Malik Hesham  OS-41              ####
+####                                          ####  
 ##################################################
 
 "
