@@ -1,9 +1,6 @@
 #! /bin/bash
 #### The main bash script that will contain the main menu ####
 #### Some commands required the root privilege. The following code checks that before proceeding.
-#!/bin/bash
-# Bash Menu Script Example
-
 if [ "$EUID" -ne 0 ]
   then echo "please execute this file as root"
   exit
